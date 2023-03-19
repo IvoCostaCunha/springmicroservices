@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<a th:href="@{|/|}">Liste des produits</a>
+<h2 th:text="${product.name}"> </h2>
+<h2 th:text="${product.price}"></h2>
+<div class="container">
+    <img th:src="${product.illustration}" class="rounded-circle">
+    <span th:text="${product.description}"></span>
+</div>
+<a th:href="@{|/cart/addItem/${product.id}|}"> Ajouter au pannier </a>
+
+</body>
+</html>

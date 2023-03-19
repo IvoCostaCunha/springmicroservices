@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<a th:href="@{|/|}">Liste des produits</a>
+<h3>Pannier</h3>
+<div th:each="product : ${cart.products}" class="col-md-4 my-1">
+    <a th:href="@{|/product-detail/${product.productId}|}" >
+        Product : <span th:text= "${product.productId}"></span> Quantity : <span th:text= "${product.quantity}"></span>
+    </a>
+</div><br>
+<a th:href="@{|/order/|}">Make order</a>
+
+</body>
+</html>
